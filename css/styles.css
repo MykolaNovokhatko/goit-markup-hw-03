@@ -72,10 +72,6 @@ img {
 .navigation-title {
   display: flex;
   gap: 40px;
-}
- 
-
-.menu {
   padding-top: 24px;
   padding-bottom: 24px;
 }
