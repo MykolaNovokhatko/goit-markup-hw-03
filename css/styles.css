@@ -72,10 +72,13 @@ img {
 .navigation-title {
   display: flex;
   gap: 40px;
+}
+
+
+.menu {
   padding-top: 24px;
   padding-bottom: 24px;
 }
-
 
 .navigation-title .link {
   color: #2e2f42;
