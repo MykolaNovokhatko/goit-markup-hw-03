@@ -72,6 +72,10 @@ img {
 .navigation-title {
   display: flex;
   gap: 40px;
+}
+ 
+
+.menu {
   padding-top: 24px;
   padding-bottom: 24px;
 }
@@ -99,7 +103,7 @@ img {
   color: #404bbf;
 }
 
-.navigation-title .studio .link:active {
+.navigation-title .studio:active {
   text-decoration: underline #404bbf;
 }
 
