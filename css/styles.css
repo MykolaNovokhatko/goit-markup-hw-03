@@ -43,7 +43,6 @@ img {
   border-bottom: 1px solid #e7e9fc;
 }
 
-
 .page-header-container {
   display: flex;
   justify-content: space-between;
@@ -73,11 +72,8 @@ img {
 .navigation-title {
   display: flex;
   gap: 40px;
-}
-
-.link {
-padding-top: 24px;
-padding-bottom: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 
@@ -88,9 +84,8 @@ padding-bottom: 24px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-decoration: none;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
+
 
 .navigation-title .link:hover {
   color: #404bbf;
@@ -279,7 +274,7 @@ padding-bottom: 24px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  margin-bottom: 8px
+  margin-bottom: 8px;
 }
 
 .profession {
@@ -302,7 +297,6 @@ padding-bottom: 24px;
   width: calc((100% - 72px) / 4);
 }
 
-
 .info-personnel {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -315,7 +309,6 @@ padding-bottom: 24px;
   padding-top: 120px;
   padding-bottom: 120px;
 }
-
 
 .project-content-info {
   padding: 32px 16px;
@@ -355,7 +348,7 @@ padding-bottom: 24px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  margin-bottom: 8px
+  margin-bottom: 8px;
 }
 
 .project-service {
