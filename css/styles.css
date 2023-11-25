@@ -46,6 +46,7 @@ img {
 .page-header-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .page-navigation {
@@ -69,12 +70,12 @@ img {
   color: #2e2f42;
 }
 
-.navigation-title {
+.navigation-menu {
   display: flex;
   gap: 40px;
 }
 
-.navigation-title .link {
+.navigation-menu .link {
   color: #2e2f42;
   font-size: 16px;
   font-weight: 500;
@@ -83,28 +84,41 @@ img {
   text-decoration: none;
   padding-top: 24px;
   padding-bottom: 24px;
+  display: block;
 }
 
-.navigation-title .link:hover {
+.navigation-menu .link:hover {
   color: #404bbf;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  transition: color 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navigation-title .link:focus {
+.navigation-menu .link:focus {
   color: #404bbf;
 }
 
-.link {
+.navigation-menu .link-decoration:active::after {
+  content: "";
+  width: 48px;
+  height: 4px;
+  border-radius: 2px;
+  background: #404bbf;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+  position: absolute;
 }
 
 /*===================== Address =====================*/
 
 .address-info {
   font-style: normal;
-  padding-top: 24px;
 }
 
 .address-item {
@@ -121,6 +135,7 @@ img {
   font-style: normal;
   padding-top: 20px;
   padding-bottom: 20px;
+  transition: color 250ms;
 }
 
 .address-item .link-address:hover {
@@ -152,6 +167,13 @@ img {
   flex-shrink: 0;
   padding-top: 188px;
   padding-bottom: 188px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(/images/background-office.jpg);
+  background-size: cover;
 }
 
 .button {
@@ -205,9 +227,9 @@ img {
 
 .item-preference {
   list-style-type: none;
-  display: flex;
   justify-content: space-between;
   gap: 24px;
+  display: flex;
 }
 
 .title-preference {
@@ -234,6 +256,19 @@ img {
   align-items: flex-start;
   flex-wrap: wrap;
 }
+
+.logo-preference-section {
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  background: #f4f4fd;
+  width: 264px;
+  height: 112px;
+  flex-shrink: 0;
+  padding: 24px 100px;
+  margin-bottom: 8px;
+}
+
 /*===================== Section 3 =====================*/
 
 .team {
@@ -296,9 +331,39 @@ img {
 
 .info-personnel {
   padding-top: 32px;
-  padding-bottom: 32px;
   text-align: center;
   margin-bottom: 8px;
+}
+
+.social-list {
+  display: flex;
+  column-gap: 24px;
+  margin-bottom: 32px;
+  justify-content: center;
+}
+
+.social-list-item {
+  display: flex;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-list-link {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.social-list-icon {
+  fill: #f4f4fd;
+}
+
+.social-list-item:focus,
+.social-list-item:hover {
+  background-color: #31d0aa;
 }
 
 /*===================== Section 4 =====================*/
@@ -362,6 +427,31 @@ img {
   object-fit: cover;
 }
 
+.overlay-img {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  background: #4d5ae5;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.overlay-img:hover .overlay {
+  transform: translateY(0%);
+}
+.overlay-text {
+  color: #f4f4fd;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  margin: 40px 32px 164px;
+}
 /*===================== Footer =====================*/
 
 .footer-page {
@@ -381,7 +471,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-decoration: none;
-  display: inline-block;
+  display: flex;
   margin-bottom: 16px;
 }
 
@@ -396,4 +486,29 @@ img {
   letter-spacing: 0.02em;
   display: flex;
   width: 264px;
+}
+
+.social-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  align-items: baseline;
+}
+
+.footer-content {
+  display: flex;
+}
+
+.footer-social-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 120px;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 16px;
 }
